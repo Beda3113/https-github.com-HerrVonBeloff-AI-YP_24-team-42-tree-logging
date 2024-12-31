@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: streamlit
+    env: docker
+    dockerComposeFilePath: docker-compose.yml
+    plan: free
+
+
+
