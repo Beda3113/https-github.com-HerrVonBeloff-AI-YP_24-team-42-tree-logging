@@ -61,17 +61,6 @@ services:
     networks:
       - app
 
-  tg:
-    build: ./tg  # Путь к папке с кодом вашего Telegram-бота
-    container_name: tg
-    ports:
-      - "5000:5000"  # Измените порт, если необходимо
-    volumes:
-      - ./tg:/app  # Монтируем локальную папку с кодом
-    restart: always
-    networks:
-      - app
-
 volumes:
   esdata:
     driver: local
@@ -79,4 +68,3 @@ volumes:
 networks:
   app:
     driver: bridge
-
